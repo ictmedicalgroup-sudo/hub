@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Medical Group — Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --verde:#9DBF60;
+  --grigio:#77797a;
+  --grigio-chiaro:#aaaaaa;
+  --g50:#F8F9F8;
+  --g100:#F0F2EE;
+  --g200:#E2E6DF;
+  --g300:#C8CEC4;
+  --g500:#77797a;
+  --g700:#4A4C4D;
+  --g900:#2A2C2D;
+  --sh-md:0 4px 12px rgba(74,76,77,.10);
+  --sh-lg:0 12px 32px rgba(74,76,77,.14),0 4px 10px rgba(74,76,77,.07);
+  --rsm:6px;
+  --rlg:16px;
+}
+body{
+  min-height:100vh;
+  background:var(--g50);
+  font-family:'Raleway',sans-serif;
+  color:var(--g900);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+}
+
+/* ── Logo ── */
+.logo{display:flex;align-items:center;gap:12px;margin-bottom:48px}
+.logo-text{line-height:1.2}
+.logo-brand{
+  font-weight:300;
+  font-size:18px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+.logo-brand span.g{color:var(--grigio)}
+.logo-brand span.v{color:var(--verde)}
+.logo-sub{
+  font-size:9px;
+  letter-spacing:3px;
+  color:var(--grigio-chiaro);
+  text-transform:uppercase;
+  font-weight:500;
+  margin-top:2px;
+}
+
+/* ── Card lista tool ── */
+.hub-card{
+  background:#fff;
+  border-radius:var(--rlg);
+  border:1px solid var(--g200);
+  box-shadow:var(--sh-lg);
+  width:100%;
+  max-width:440px;
+  overflow:hidden;
+}
+
+/* ── Singola riga tool ── */
+.tool-item{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:18px 24px;
+  text-decoration:none;
+  color:inherit;
+  border-bottom:1px solid var(--g100);
+  transition:background .15s, transform .1s;
+  cursor:pointer;
+}
+.tool-item:last-child{border-bottom:none}
+.tool-item:hover{background:var(--g50)}
+.tool-item:active{background:var(--g100);transform:scale(.99)}
+
+.tool-icon{
+  width:38px;height:38px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;flex-shrink:0;
+}
+
+.tool-info{flex:1}
+.tool-name{
+  font-weight:300;
+  font-size:13px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--g700);
+  line-height:1.2;
+}
+.tool-name span.v{color:var(--verde)}
+
+.tool-arrow{
+  color:var(--g300);
+  font-size:16px;
+  transition:color .15s, transform .15s;
+}
+.tool-item:hover .tool-arrow{
+  color:var(--verde);
+  transform:translateX(3px);
+}
+
+/* ── Footer versione ── */
+.hub-ver{
+  margin-top:20px;
+  font-size:10px;
+  color:var(--grigio-chiaro);
+  letter-spacing:.5px;
+  text-align:center;
+}
+</style>
+</head>
+<body>
+
+<!-- LOGO -->
+<div class="logo">
+  <svg width="44" height="34" viewBox="0 0 90 70" fill="none">
+    <circle cx="28" cy="22" r="19" stroke="#D5E3B7" stroke-width="3.5" fill="none"/>
+    <circle cx="40" cy="38" r="24" stroke="#77797A" stroke-width="3.5" fill="none"/>
+  </svg>
+  <div class="logo-text">
+    <div class="logo-brand">
+      <span class="g">MEDICAL</span><span class="v">GROUP</span>
+    </div>
+    <div class="logo-sub">Portale applicazioni</div>
+  </div>
+</div>
+
+<!-- LISTA TOOL -->
+<div class="hub-card">
+
+  <a class="tool-item" href="https://ictmedicalgroup-sudo.github.io/sp/" target="_blank" rel="noopener">
+    <div class="tool-icon" style="background:#EEF5E3">🏃</div>
+    <div class="tool-info">
+      <div class="tool-name"><span class="v">PROSPECT</span> SPORT</div>
+    </div>
+    <div class="tool-arrow">›</div>
+  </a>
+
+  <a class="tool-item" href="https://ictmedicalgroup-sudo.github.io/sedi/" target="_blank" rel="noopener">
+    <div class="tool-icon" style="background:#EEF5E3">🏢</div>
+    <div class="tool-info">
+      <div class="tool-name"><span class="v">GESTIONE</span> SEDI</div>
+    </div>
+    <div class="tool-arrow">›</div>
+  </a>
+
+  <a class="tool-item" href="https://ictmedicalgroup-sudo.github.io/ferie/" target="_blank" rel="noopener">
+    <div class="tool-icon" style="background:#EEF5E3">🌴</div>
+    <div class="tool-info">
+      <div class="tool-name"><span class="v">GESTIONE</span> FERIE</div>
+    </div>
+    <div class="tool-arrow">›</div>
+  </a>
+
+  <a class="tool-item" href="https://ictmedicalgroup-sudo.github.io/registro-interventi/" target="_blank" rel="noopener">
+    <div class="tool-icon" style="background:#EEF5E3">🔧</div>
+    <div class="tool-info">
+      <div class="tool-name"><span class="v">REGISTRO</span> INTERVENTI</div>
+    </div>
+    <div class="tool-arrow">›</div>
+  </a>
+
+  <a class="tool-item" href="https://ictmedicalgroup-sudo.github.io/magazzino/" target="_blank" rel="noopener">
+    <div class="tool-icon" style="background:#EEF5E3">📦</div>
+    <div class="tool-info">
+      <div class="tool-name"><span class="v">GESTIONE</span> MAGAZZINO</div>
+    </div>
+    <div class="tool-arrow">›</div>
+  </a>
+
+</div>
+
+<div class="hub-ver" id="hub-ver"></div>
+
+<script>
+// Versione build da GitHub
+(async()=>{
+  try{
+    const r=await fetch('https://api.github.com/repos/ictmedicalgroup-sudo/hub/commits?per_page=1');
+    if(!r.ok) return;
+    const [c]=await r.json();
+    const d=new Date(c.commit.committer.date);
+    const s='build '+d.toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit',year:'numeric'})
+            +' '+d.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
+    document.getElementById('hub-ver').textContent=s;
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
